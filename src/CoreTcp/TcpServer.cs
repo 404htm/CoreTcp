@@ -43,9 +43,9 @@ namespace CoreTcp
 
                     byte[] data = new byte[500];
                     int size = socket.Receive(data);
-                    Console.WriteLine("Data received");
+                    Console.WriteLine("Server-Data Received:");
                     for (var i = 0; i < size; i++) Console.Write(Convert.ToChar(data[i]));
-
+                    Console.WriteLine();
 
                     socket.Close();
                
@@ -55,6 +55,7 @@ namespace CoreTcp
 
         public void Dispose()
         {
+            Console.WriteLine("Server - Shutting Down.");
             _listener?.Stop();
         }
     }

@@ -31,7 +31,7 @@ namespace CoreTcp
         public void Intercept(IInvocation invocation)
         {
             //invocation.Method.Name
-            Console.Write($"Log: Method Called: {invocation.Method.Name}");
+            Console.WriteLine($"InterceptLog: Method: {invocation.Method.Name}");
             _client.Send(invocation.Method.Name);
             //invocation.Proceed();
 

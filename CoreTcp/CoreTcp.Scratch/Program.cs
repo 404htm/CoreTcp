@@ -1,4 +1,5 @@
 ﻿using System;
+using CoreTcp.Clients;
 
 namespace CoreTcp.Scratch
 {
@@ -6,12 +7,19 @@ namespace CoreTcp.Scratch
     {
         static void Main(string[] args)
         {
-            var server = new TcpServer<ITest>(new Test());
-            server.Start(10001);
+            using (var server = new TcpServer<ITest>(new Test()))
+            {
+                
+                server.Start(10001);
             
-            var proxy = StuffFactory.Create();
-            proxy.SendString();
-            proxy.Property = "Test";
+                var proxy = StuffFactory.Create();
+                proxy.SendString();
+                proxy.Property = "Test";
+
+                var client = new TcpCommClient(10001, "127.0.0.1");
+                client.Send("Test raw client");
+            }
+
             
 
             
