@@ -1,28 +1,35 @@
 ﻿using System.Net.Sockets;
 using System.Text;
 
-namespace CoreTcp
+namespace CoreTcp.Clients
 {
-    public class TcpClientFactory
+    public class TcpCommClient : ICommClient
     {
-        private int _port;
-
-        public TcpClientFactory(int port)
+        private readonly int _port;
+        private readonly string _hostname;
+        
+        public TcpCommClient(int port, string hostname)
         {
             _port = port;
+            _hostname = hostname;
         }
 
         public void Send(string message)
         {
-            var client = new TcpClient("127.0.0.1", _port);
+            
+            var client = new TcpClient(_hostname, _port);
             var str = client.GetStream();
 
             var enc = new UTF8Encoding();
             var bytes = enc.GetBytes(message);
 
             str.Write(bytes, 0, bytes.Length);
+
             str.Flush();
             client.Close();
+            
         }
     }
+
+
 }

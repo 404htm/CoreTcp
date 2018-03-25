@@ -19,8 +19,13 @@
       <e p="packages" t="ExcludeRecursive" />
     </e>
     <e p="$PROJECT_DIR$/../src/CoreTcp" t="IncludeRecursive">
+      <e p="ClientFactory.cs" t="Include" />
+      <e p="Clients" t="Include">
+        <e p="ICommClient.cs" t="Include" />
+        <e p="TcpCommClient.cs" t="Include" />
+      </e>
       <e p="CoreTcp.csproj" t="IncludeRecursive" />
-      <e p="TcpClient.cs" t="Include" />
+      <e p="ProxyGen.cs" t="Include" />
       <e p="TcpServer.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive">

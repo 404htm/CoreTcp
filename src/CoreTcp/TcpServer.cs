@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace CoreTcp
 {
-    public class TcpServer<T>
+    public class TcpServer<T> : IDisposable
     {
+        private TcpListener _listener;
         public bool Running { get; private set; }
         public T Service { get; }
 
@@ -24,19 +25,19 @@ namespace CoreTcp
         {
             if (Running) throw new InvalidOperationException("Server is already running");
             Running = true;
-            
+
             ip = ip ?? IPAddress.Any;
-            ThreadPool.QueueUserWorkItem((a) => Listen(port, ip));
+            _listener = new TcpListener(ip, port);
+            ThreadPool.QueueUserWorkItem((a) => Start());
         }
         
-        private void Listen(int port, IPAddress ip = null)
+        private void Start()
         {
-            var listener = new TcpListener(ip, port);
-            listener.Start();
+            _listener.Start();
             
             while (Running)
             {
-                var socket = listener.AcceptSocket();
+                var socket = _listener.AcceptSocket();
                 Console.WriteLine("Conected");
 
 
@@ -52,5 +53,9 @@ namespace CoreTcp
         }
 
 
+        public void Dispose()
+        {
+            _listener?.Stop();
+        }
     }
 }
