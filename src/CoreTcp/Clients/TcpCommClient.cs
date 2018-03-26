@@ -1,4 +1,5 @@
-﻿using System.Net.Sockets;
+﻿using System.IO;
+using System.Net.Sockets;
 using System.Text;
 
 namespace CoreTcp.Clients
@@ -28,6 +29,12 @@ namespace CoreTcp.Clients
             str.Flush();
             client.Close();
             
+        }
+        
+        public Stream GetStream()
+        {  
+            var client = new TcpClient(_hostname, _port);
+            return client.GetStream();
         }
     }
 

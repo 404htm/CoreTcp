@@ -1,8 +1,14 @@
 ﻿using System;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using CoreTcp.Clients;
+using CoreTcp.Utility;
 
 namespace CoreTcp
 {
@@ -40,17 +46,38 @@ namespace CoreTcp
                 var socket = _listener.AcceptSocket();
                 Console.WriteLine("Conected");
 
+               
+                //var enc = new UTF8Encoding();
+                //Console.WriteLine("Data:");
+                //Console.WriteLine(enc.GetString(data));
 
-                    byte[] data = new byte[500];
-                    int size = socket.Receive(data);
-                    Console.WriteLine("Server-Data Received:");
-                    for (var i = 0; i < size; i++) Console.Write(Convert.ToChar(data[i]));
-                    Console.WriteLine();
+                var message = StreamUtils.ReadFromSocket<Request>(socket);
+                Console.WriteLine("Read object.");
 
-                    socket.Close();
+                var method = typeof(T).GetMethod(message.Method);
+
+                if (method.ReturnType != typeof(void))
+                {
+                    var @return = new Return();
+                    var respSer = new DataContractSerializer(typeof(Return));
+                    @return.Value = method.Invoke(Service, message.Params);
+                    var str = new MemoryStream();
+
+                    respSer.WriteObject(str, @return);
+                    socket.Send(str.ToArray());
+                }
+
+                
+                
+                Console.WriteLine(message.Method);
+                Console.WriteLine();
+
+                socket.Close();
                
             }
         }
+        
+        
 
 
         public void Dispose()
