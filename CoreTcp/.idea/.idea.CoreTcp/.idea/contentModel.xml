@@ -26,9 +26,11 @@
       </e>
       <e p="CoreTcp.csproj" t="IncludeRecursive" />
       <e p="ProxyGen.cs" t="Include" />
-      <e p="Request.cs" t="Include" />
       <e p="Return.cs" t="Include" />
-      <e p="Servers" t="Include" />
+      <e p="Servers" t="Include">
+        <e p="Server.cs" t="Include" />
+        <e p="Service.cs" t="Include" />
+      </e>
       <e p="TcpServer.cs" t="Include" />
       <e p="Utility" t="Include">
         <e p="StreamUtils.cs" t="Include" />

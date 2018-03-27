@@ -17,9 +17,9 @@ namespace CoreTcp.Scratch
                 //proxy.SendString();
                 var result = proxy.Add(2, 2);
                 Console.WriteLine($"Return value from proxy: {result}");
-                proxy.Property = "Test";
+                //proxy.Property = "Test";
 
-                var client = new TcpCommClient(10001, "127.0.0.1");
+                var client = new TcpCommClient(10002, "127.0.0.1");
                 client.Send("Test raw client");
                 
                 

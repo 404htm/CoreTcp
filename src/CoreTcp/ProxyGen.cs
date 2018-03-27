@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Data;
 using System.IO;
 using System.Linq.Expressions;
+using System.Net.Cache;
 using System.Net.Http;
 using System.Net.Sockets;
 using System.Reflection;
@@ -35,33 +37,20 @@ namespace CoreTcp
 
         public void Intercept(IInvocation invocation)
         {
-
-            //invocation.Method.Name
-            Console.WriteLine($"InterceptLog: Method: {invocation.Method.Name}");
-            var request = new Request
-            {
-                Method = invocation.Method.Name,
-                Params = invocation.Arguments
-            };
-
             var str = _client.GetStream();
-
-            StreamUtils.WriteToStream(typeof(Request), request, str);
-            Console.WriteLine("Request writtten to stream");
-            //var buffer = new byte[500];
-           // str.Read(buffer, 0, 500);
-           // var enc = new UTF8Encoding();
-            //Console.WriteLine(enc.GetString(buffer));
+            var req = new object[2 + invocation.Arguments.Length];
+            req[1] = invocation.Method.Name;
+            Array.Copy(invocation.Arguments, 0, req, 2, invocation.Arguments.Length);
+            StreamUtils.WriteToStream(typeof(object[]), req, str);
             
-            //_client.Send(invocation.Method.Name);
 
             if ( invocation.Method.ReturnType != typeof(void))
             {
-                var @return = StreamUtils.ReadFromStream<Return>(str);
+                //var response = 
                 
-                //var serReturn = new DataContractJsonSerializer(typeof(Return));
-                //var @return = (Return)serReturn.ReadObject(str);
-                invocation.ReturnValue = @return.Value;
+                var serReturn = new DataContractJsonSerializer(typeof(object[]));
+                var result = (object[])serReturn.ReadObject(str);
+                invocation.ReturnValue = result[0]; //@return.Value;
             }
             //invocation.Proceed();
             

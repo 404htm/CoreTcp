@@ -46,30 +46,29 @@ namespace CoreTcp
                 var socket = _listener.AcceptSocket();
                 Console.WriteLine("Conected");
 
-               
-                //var enc = new UTF8Encoding();
-                //Console.WriteLine("Data:");
-                //Console.WriteLine(enc.GetString(data));
-
-                var message = StreamUtils.ReadFromSocket<Request>(socket);
-                Console.WriteLine("Read object.");
-
-                var method = typeof(T).GetMethod(message.Method);
+                var message = StreamUtils.ReadFromSocket<object[]>(socket);
+                
+                var method = typeof(T).GetMethod((string)message[1]);
 
                 if (method.ReturnType != typeof(void))
                 {
-                    var @return = new Return();
-                    var respSer = new DataContractSerializer(typeof(Return));
-                    @return.Value = method.Invoke(Service, message.Params);
-                    var str = new MemoryStream();
+                    var args = new object[message.Length - 2];
+                    Array.Copy(message,2,args,0, args.Length);
+                    var result = method.Invoke(Service, args);
+                    var resultArr = new object[1] {result};
 
-                    respSer.WriteObject(str, @return);
-                    socket.Send(str.ToArray());
+                    var ser = new DataContractJsonSerializer(typeof(object[]));
+                    byte[] data;
+                    using (var ms = new MemoryStream())
+                    {
+                        ser.WriteObject(ms, resultArr);
+                        data = ms.ToArray();
+                    }
+
+                    socket.Send(data);
                 }
 
                 
-                
-                Console.WriteLine(message.Method);
                 Console.WriteLine();
 
                 socket.Close();

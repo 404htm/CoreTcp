@@ -2,26 +2,29 @@
 using System.IO;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Json;
+using System.Text;
 
 namespace CoreTcp.Utility
 {
     public static class StreamUtils
     {
+        static byte[] GetBytes(int len)
+        {
+            return BitConverter.GetBytes(len);
+        }
+        
         public static void WriteToStream(Type type, object obj, Stream stream)
         {
-            
             byte[] data;
             var ser = new DataContractJsonSerializer(type);
+            
             using (var ms = new MemoryStream())
             {
                 ser.WriteObject(ms, obj);
                 data = ms.ToArray();
             }
-            
-            byte[] intBytes = BitConverter.GetBytes(data.Length);
-            //if (BitConverter.IsLittleEndian) Array.Reverse(intBytes);
-            
-            stream.Write(intBytes,0,4);
+
+            stream.Write(GetBytes(data.Length),0,4);
             stream.Write(data, 0, data.Length);
         }
 
@@ -35,10 +38,14 @@ namespace CoreTcp.Utility
             
             byte[] buffer = new byte[size];
             socket.Receive(buffer);
- 
-            Console.WriteLine($"Data read from socket");
+             
             var ser = new DataContractJsonSerializer(typeof(T));
+            Console.WriteLine($"Data read from socket");
+            Console.WriteLine(new UTF8Encoding().GetString(buffer));
+            
             ser.ReadObject(new MemoryStream(buffer));
+            
+            
             return (T)ser.ReadObject(new MemoryStream(buffer));
             
         }
@@ -51,9 +58,12 @@ namespace CoreTcp.Utility
             var size = BitConverter.ToInt32(sizeData, 0);
             Console.WriteLine($"Size read from stream: {size}");
             
-            byte[] buffer = new byte[size];
+            byte[] buffer = new byte[500];
             stream.Read(buffer, 0, size);
             Console.WriteLine($"Data read from stream");
+
+            var enc = new UTF8Encoding();
+            Console.WriteLine(enc.GetString(buffer));
             
             var ser = new DataContractJsonSerializer(typeof(T));
             ser.ReadObject(new MemoryStream(buffer));
