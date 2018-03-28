@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8078ea72-5885-48e7-b7a3-e0c9f3b22d7e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoreTcp/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.CoreTcp/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CoreTcp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.CoreTcp/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/CoreTcp.Scratch/Program.cs" afterPath="$PROJECT_DIR$/CoreTcp.Scratch/Program.cs" />
-      <change beforePath="$PROJECT_DIR$/../src/CoreTcp/CoreTcp.csproj" afterPath="$PROJECT_DIR$/../src/CoreTcp/CoreTcp.csproj" />
-      <change beforePath="$PROJECT_DIR$/../src/CoreTcp/ProxyGen.cs" afterPath="$PROJECT_DIR$/../src/CoreTcp/ProxyGen.cs" />
-      <change beforePath="$PROJECT_DIR$/../src/CoreTcp/Request.cs" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../src/CoreTcp/TcpServer.cs" afterPath="$PROJECT_DIR$/../src/CoreTcp/TcpServer.cs" />
-      <change beforePath="$PROJECT_DIR$/../src/CoreTcp/Utility/StreamUtils.cs" afterPath="$PROJECT_DIR$/../src/CoreTcp/Utility/StreamUtils.cs" />
+      <change beforePath="$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs" afterPath="$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs" />
+      <change beforePath="$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs" afterPath="$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,18 +21,18 @@
       <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CoreTcp.Scratch/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="261">
+              <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
               <folding>
-                <marker date="1522120643321" expanded="true" signature="6:67" ph="..." />
-                <marker date="1522120643321" expanded="true" signature="94:1210" ph="{...}" />
-                <marker date="1522120643321" expanded="true" signature="114:931" ph="{...}" />
-                <marker date="1522120643321" expanded="true" signature="160:925" ph="{...}" />
-                <marker date="1522120643321" expanded="true" signature="248:745" ph="{...}" />
-                <marker date="1522120643321" expanded="true" signature="787:915" ph="/* var client = new TcpClientFactory(5556); ... */" />
-                <marker date="1522120643321" expanded="true" signature="966:1207" ph="{...}" />
-                <marker date="1522120643321" expanded="true" signature="1005:1071" ph="{...}" />
-                <marker date="1522120643321" expanded="true" signature="1109:1155" ph="{...}" />
+                <marker date="1522121749816" expanded="true" signature="6:67" ph="..." />
+                <marker date="1522121749816" expanded="true" signature="94:1367" ph="{...}" />
+                <marker date="1522121749816" expanded="true" signature="114:1088" ph="{...}" />
+                <marker date="1522121749816" expanded="true" signature="160:1082" ph="{...}" />
+                <marker date="1522121749816" expanded="true" signature="248:902" ph="{...}" />
+                <marker date="1522121749816" expanded="true" signature="944:1072" ph="/* var client = new TcpClientFactory(5556); ... */" />
+                <marker date="1522121749816" expanded="true" signature="1123:1364" ph="{...}" />
+                <marker date="1522121749816" expanded="true" signature="1162:1228" ph="{...}" />
+                <marker date="1522121749816" expanded="true" signature="1266:1312" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -45,26 +41,44 @@
       <file leaf-file-name="Server.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="348">
+              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
               <folding>
-                <marker date="1522116847704" expanded="false" signature="6:59" ph="..." />
-                <marker date="1522116847704" expanded="true" signature="86:315" ph="{...}" />
-                <marker date="1522116847704" expanded="true" signature="112:313" ph="{...}" />
-                <marker date="1522116847704" expanded="true" signature="249:307" ph="{...}" />
+                <marker date="1522207431671" expanded="true" signature="6:78" ph="..." />
+                <marker date="1522207431671" expanded="true" signature="96:505" ph="{...}" />
+                <marker date="1522207431671" expanded="true" signature="126:503" ph="{...}" />
+                <marker date="1522207431671" expanded="true" signature="258:415" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Service.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TcpServer.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding>
+                <marker date="1522206565830" expanded="true" signature="16:80" ph="{...}" />
+                <marker date="1522206565830" expanded="true" signature="57:78" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Service.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            <state relative-caret-position="580">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
-                <marker date="1522116691411" expanded="true" signature="25:75" ph="{...}" />
-                <marker date="1522116691411" expanded="true" signature="52:73" ph="{...}" />
+                <marker date="1522208033069" expanded="true" signature="6:47" ph="..." />
+                <marker date="1522208033069" expanded="true" signature="65:572" ph="{...}" />
+                <marker date="1522208033069" expanded="true" signature="101:122" ph="{...}" />
+                <marker date="1522208033069" expanded="true" signature="161:570" ph="{...}" />
+                <marker date="1522208033069" expanded="true" signature="287:349" ph="{...}" />
+                <marker date="1522208033069" expanded="true" signature="380:465" ph="{...}" />
+                <marker date="1522208033069" expanded="true" signature="522:555" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -73,7 +87,7 @@
       <file leaf-file-name="StreamUtils.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Utility/StreamUtils.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-116">
+            <state relative-caret-position="493">
               <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
               <folding>
                 <marker date="1522120730392" expanded="false" signature="6:116" ph="..." />
@@ -103,19 +117,6 @@
                 <marker date="1522008628946" expanded="true" signature="285:365" ph="{...}" />
                 <marker date="1522008628946" expanded="true" signature="407:745" ph="{...}" />
                 <marker date="1522008628946" expanded="true" signature="788:907" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ICommClient.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Clients/ICommClient.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <marker date="1522008683929" expanded="true" signature="35:150" ph="{...}" />
-                <marker date="1522008683929" expanded="true" signature="70:148" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -168,10 +169,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TcpServer.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TcpServer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/CoreTcp/TcpServer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="1092">
               <caret line="57" column="59" lean-forward="false" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
               <folding>
                 <marker date="1522121492924" expanded="true" signature="6:270" ph="..." />
@@ -210,6 +211,7 @@
     <setting file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CoreTcp.Scratch/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23AB7A00-4A24-430B-AC43-8833B38A94EB/f8/4fc47962/TcpClient.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../src/CoreTcp/ProxyGen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../src/CoreTcp/Clients/ICommClient.cs" root0="FORCE_HIGHLIGHTING" />
@@ -229,12 +231,15 @@
         <option value="$PROJECT_DIR$/../src/CoreTcp/Clients/ICommClient.cs" />
         <option value="$PROJECT_DIR$/../src/CoreTcp/Clients/Return.cs" />
         <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/ServerBase.cs" />
-        <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs" />
-        <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs" />
-        <option value="$PROJECT_DIR$/CoreTcp.Scratch/Program.cs" />
         <option value="$PROJECT_DIR$/../src/CoreTcp/Utility/StreamUtils.cs" />
         <option value="$PROJECT_DIR$/../src/CoreTcp/ProxyGen.cs" />
         <option value="$PROJECT_DIR$/../src/CoreTcp/TcpServer.cs" />
+        <option value="$PROJECT_DIR$/CoreTcp.Scratch/Program.cs" />
+        <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/PhotonService.cs" />
+        <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/PhotonTcp.cs" />
+        <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/PhotonTcpServer.cs" />
+        <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs" />
+        <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs" />
       </list>
     </option>
   </component>
@@ -362,12 +367,12 @@
       <option name="presentableId" value="Default" />
       <updated>1521777261759</updated>
       <workItem from="1521777263980" duration="1091000" />
-      <workItem from="1521850651730" duration="58672000" />
+      <workItem from="1521850651730" duration="65230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59763000" />
+    <option name="totallyTimeSpent" value="66321000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,16 +385,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="3204" height="1736" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20160772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295302" sideWeight="0.50128615" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295302" sideWeight="0.49871382" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295302" sideWeight="0.49871382" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295302" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30939597" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13762058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13762058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295302" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -567,67 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreTcp.Scratch/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <marker date="1522120643321" expanded="true" signature="6:67" ph="..." />
-            <marker date="1522120643321" expanded="true" signature="94:1210" ph="{...}" />
-            <marker date="1522120643321" expanded="true" signature="114:931" ph="{...}" />
-            <marker date="1522120643321" expanded="true" signature="160:925" ph="{...}" />
-            <marker date="1522120643321" expanded="true" signature="248:745" ph="{...}" />
-            <marker date="1522120643321" expanded="true" signature="787:915" ph="/* var client = new TcpClientFactory(5556); ... */" />
-            <marker date="1522120643321" expanded="true" signature="966:1207" ph="{...}" />
-            <marker date="1522120643321" expanded="true" signature="1005:1071" ph="{...}" />
-            <marker date="1522120643321" expanded="true" signature="1109:1155" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <marker date="1522116847704" expanded="false" signature="6:59" ph="..." />
-            <marker date="1522116847704" expanded="true" signature="86:315" ph="{...}" />
-            <marker date="1522116847704" expanded="true" signature="112:313" ph="{...}" />
-            <marker date="1522116847704" expanded="true" signature="249:307" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding>
-            <marker date="1522116691411" expanded="true" signature="25:75" ph="{...}" />
-            <marker date="1522116691411" expanded="true" signature="52:73" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Utility/StreamUtils.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-116">
-          <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-          <folding>
-            <marker date="1522120730392" expanded="false" signature="6:116" ph="..." />
-            <marker date="1522120730392" expanded="true" signature="143:2992" ph="{...}" />
-            <marker date="1522120730392" expanded="true" signature="181:2990" ph="{...}" />
-            <marker date="1522120730392" expanded="true" signature="227:294" ph="{...}" />
-            <marker date="1522120730392" expanded="true" signature="382:757" ph="{...}" />
-            <marker date="1522120730392" expanded="true" signature="538:645" ph="{...}" />
-            <marker date="1522120730392" expanded="true" signature="815:1579" ph="{...}" />
-            <marker date="1522120730392" expanded="true" signature="1645:2405" ph="{...}" />
-            <marker date="1522120730392" expanded="true" signature="2493:2984" ph="{...}" />
-            <marker date="1522120730392" expanded="true" signature="2649:2756" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src/CoreTcp/ClientFactory.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -669,9 +614,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CoreTcp.Scratch/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <marker date="1522121749816" expanded="true" signature="6:67" ph="..." />
+            <marker date="1522121749816" expanded="true" signature="94:1367" ph="{...}" />
+            <marker date="1522121749816" expanded="true" signature="114:1088" ph="{...}" />
+            <marker date="1522121749816" expanded="true" signature="160:1082" ph="{...}" />
+            <marker date="1522121749816" expanded="true" signature="248:902" ph="{...}" />
+            <marker date="1522121749816" expanded="true" signature="944:1072" ph="/* var client = new TcpClientFactory(5556); ... */" />
+            <marker date="1522121749816" expanded="true" signature="1123:1364" ph="{...}" />
+            <marker date="1522121749816" expanded="true" signature="1162:1228" ph="{...}" />
+            <marker date="1522121749816" expanded="true" signature="1266:1312" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Utility/StreamUtils.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+          <folding>
+            <marker date="1522120730392" expanded="false" signature="6:116" ph="..." />
+            <marker date="1522120730392" expanded="true" signature="143:2992" ph="{...}" />
+            <marker date="1522120730392" expanded="true" signature="181:2990" ph="{...}" />
+            <marker date="1522120730392" expanded="true" signature="227:294" ph="{...}" />
+            <marker date="1522120730392" expanded="true" signature="382:757" ph="{...}" />
+            <marker date="1522120730392" expanded="true" signature="538:645" ph="{...}" />
+            <marker date="1522120730392" expanded="true" signature="815:1579" ph="{...}" />
+            <marker date="1522120730392" expanded="true" signature="1645:2405" ph="{...}" />
+            <marker date="1522120730392" expanded="true" signature="2493:2984" ph="{...}" />
+            <marker date="1522120730392" expanded="true" signature="2649:2756" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../src/CoreTcp/TcpServer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="1092">
           <caret line="57" column="59" lean-forward="false" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
           <folding>
             <marker date="1522121492924" expanded="true" signature="6:270" ph="..." />
@@ -684,6 +666,46 @@
             <marker date="1522121492924" expanded="true" signature="1538:2178" ph="{...}" />
             <marker date="1522121492924" expanded="true" signature="1975:2120" ph="{...}" />
             <marker date="1522121492924" expanded="true" signature="2356:2465" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <marker date="1522206565830" expanded="true" signature="16:80" ph="{...}" />
+            <marker date="1522206565830" expanded="true" signature="57:78" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <marker date="1522207431671" expanded="true" signature="6:78" ph="..." />
+            <marker date="1522207431671" expanded="true" signature="96:505" ph="{...}" />
+            <marker date="1522207431671" expanded="true" signature="126:503" ph="{...}" />
+            <marker date="1522207431671" expanded="true" signature="258:415" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <marker date="1522208033069" expanded="true" signature="6:47" ph="..." />
+            <marker date="1522208033069" expanded="true" signature="65:572" ph="{...}" />
+            <marker date="1522208033069" expanded="true" signature="101:122" ph="{...}" />
+            <marker date="1522208033069" expanded="true" signature="161:570" ph="{...}" />
+            <marker date="1522208033069" expanded="true" signature="287:349" ph="{...}" />
+            <marker date="1522208033069" expanded="true" signature="380:465" ph="{...}" />
+            <marker date="1522208033069" expanded="true" signature="522:555" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -15,8 +15,12 @@ namespace CoreTcp.Scratch
             
                 var proxy = StuffFactory.Create();
                 //proxy.SendString();
-                var result = proxy.Add(2, 2);
-                Console.WriteLine($"Return value from proxy: {result}");
+                var result1 = proxy.Add(2, 2);
+                Console.WriteLine($"Return value from proxy: {result1}");
+                
+                var result2 = proxy.Add(3, 3);
+                Console.WriteLine($"Return value from proxy: {result2}");
+                
                 //proxy.Property = "Test";
 
                 var client = new TcpCommClient(10002, "127.0.0.1");

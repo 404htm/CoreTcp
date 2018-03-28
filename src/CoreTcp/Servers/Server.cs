@@ -1,16 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace CoreTcp.Servers
-{
+namespace Photon
+{    
     public class Server
     {
-        Dictionary<int, Service> _services = new Dictionary<int, Service>();
+        protected List<Service> _services = new List<Service>();
         
-        public Server Register<T>(T service)
+        public Server Register<T>(T implementation)
         {
+            var svc = new Service<T>(implementation);
             
+            
+            _services.Add(svc);
             return this;
         }
+
+        protected Service GetImplementation(int id) => _services.ElementAt(id);
+
     }
 }
