@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8078ea72-5885-48e7-b7a3-e0c9f3b22d7e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CoreTcp/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.CoreTcp/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CoreTcp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.CoreTcp/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CoreTcp.Scratch/Program.cs" afterPath="$PROJECT_DIR$/CoreTcp.Scratch/Program.cs" />
-      <change beforePath="$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs" afterPath="$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs" />
       <change beforePath="$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs" afterPath="$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs" />
+      <change beforePath="$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs" afterPath="$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,11 +52,11 @@
       <file leaf-file-name="TcpServer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="58">
+              <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
               <folding>
-                <marker date="1522206565830" expanded="true" signature="16:80" ph="{...}" />
-                <marker date="1522206565830" expanded="true" signature="57:78" ph="{...}" />
+                <marker date="1522208163974" expanded="true" signature="16:77" ph="{...}" />
+                <marker date="1522208163974" expanded="true" signature="54:75" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -69,16 +65,16 @@
       <file leaf-file-name="Service.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            <state relative-caret-position="667">
+              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
               <folding>
-                <marker date="1522208033069" expanded="true" signature="6:47" ph="..." />
-                <marker date="1522208033069" expanded="true" signature="65:572" ph="{...}" />
-                <marker date="1522208033069" expanded="true" signature="101:122" ph="{...}" />
-                <marker date="1522208033069" expanded="true" signature="161:570" ph="{...}" />
-                <marker date="1522208033069" expanded="true" signature="287:349" ph="{...}" />
-                <marker date="1522208033069" expanded="true" signature="380:465" ph="{...}" />
-                <marker date="1522208033069" expanded="true" signature="522:555" ph="{...}" />
+                <marker date="1522208192398" expanded="true" signature="6:47" ph="..." />
+                <marker date="1522208192398" expanded="true" signature="65:584" ph="{...}" />
+                <marker date="1522208192398" expanded="true" signature="101:122" ph="{...}" />
+                <marker date="1522208192398" expanded="true" signature="161:582" ph="{...}" />
+                <marker date="1522208192398" expanded="true" signature="287:349" ph="{...}" />
+                <marker date="1522208192398" expanded="true" signature="380:465" ph="{...}" />
+                <marker date="1522208192398" expanded="true" signature="522:567" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -239,6 +235,7 @@
         <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/PhotonTcp.cs" />
         <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/PhotonTcpServer.cs" />
         <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs" />
+        <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs" />
         <option value="$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs" />
       </list>
     </option>
@@ -249,7 +246,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="142" />
     <option name="y" value="602" />
     <option name="width" value="1394" />
@@ -367,12 +364,12 @@
       <option name="presentableId" value="Default" />
       <updated>1521777261759</updated>
       <workItem from="1521777263980" duration="1091000" />
-      <workItem from="1521850651730" duration="65230000" />
+      <workItem from="1521850651730" duration="65392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66321000" />
+    <option name="totallyTimeSpent" value="66483000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,20 +381,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="3204" height="1736" extended-state="6" />
+    <frame x="-2" y="0" width="3204" height="1736" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20160772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295302" sideWeight="0.50128615" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295302" sideWeight="0.49871382" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295302" sideWeight="0.49871382" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295302" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30939597" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13762058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295302" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295302" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295302" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24983923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -670,17 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1522206565830" expanded="true" signature="16:80" ph="{...}" />
-            <marker date="1522206565830" expanded="true" signature="57:78" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Server.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -694,18 +680,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/TcpServer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding>
+            <marker date="1522208163974" expanded="true" signature="16:77" ph="{...}" />
+            <marker date="1522208163974" expanded="true" signature="54:75" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../src/CoreTcp/Servers/Service.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="667">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
           <folding>
-            <marker date="1522208033069" expanded="true" signature="6:47" ph="..." />
-            <marker date="1522208033069" expanded="true" signature="65:572" ph="{...}" />
-            <marker date="1522208033069" expanded="true" signature="101:122" ph="{...}" />
-            <marker date="1522208033069" expanded="true" signature="161:570" ph="{...}" />
-            <marker date="1522208033069" expanded="true" signature="287:349" ph="{...}" />
-            <marker date="1522208033069" expanded="true" signature="380:465" ph="{...}" />
-            <marker date="1522208033069" expanded="true" signature="522:555" ph="{...}" />
+            <marker date="1522208192398" expanded="true" signature="6:47" ph="..." />
+            <marker date="1522208192398" expanded="true" signature="65:584" ph="{...}" />
+            <marker date="1522208192398" expanded="true" signature="101:122" ph="{...}" />
+            <marker date="1522208192398" expanded="true" signature="161:582" ph="{...}" />
+            <marker date="1522208192398" expanded="true" signature="287:349" ph="{...}" />
+            <marker date="1522208192398" expanded="true" signature="380:465" ph="{...}" />
+            <marker date="1522208192398" expanded="true" signature="522:567" ph="{...}" />
           </folding>
         </state>
       </provider>

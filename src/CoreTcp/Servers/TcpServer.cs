@@ -1,6 +1,6 @@
 ﻿namespace Photon
 {
-    public class TcpServer : Server<P>
+    public class TcpServer : Server
     {
         
     }

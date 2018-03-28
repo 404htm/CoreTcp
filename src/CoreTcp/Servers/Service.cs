@@ -26,7 +26,7 @@ namespace Photon
 
         public object[] Call(int method, object[] args)
         {
-            
+            return null;
         }
         
     }
