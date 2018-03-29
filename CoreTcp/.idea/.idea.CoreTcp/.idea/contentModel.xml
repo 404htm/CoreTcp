@@ -24,6 +24,11 @@
         <e p="ICommClient.cs" t="Include" />
         <e p="TcpCommClient.cs" t="Include" />
       </e>
+      <e p="Compilation" t="Include">
+        <e p="IMethodBuilder.cs" t="Include" />
+        <e p="Method.cs" t="Include" />
+        <e p="MethodBuilder.cs" t="Include" />
+      </e>
       <e p="CoreTcp.csproj" t="IncludeRecursive" />
       <e p="ProxyGen.cs" t="Include" />
       <e p="Return.cs" t="Include" />
