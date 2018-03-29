@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTcp", "..\src\CoreTcp\CoreTcp.csproj", "{45860CB4-5BD1-4287-91DF-87EDDE9194F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonTcp", "src\PhotonTcp\PhotonTcp.csproj", "{45860CB4-5BD1-4287-91DF-87EDDE9194F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTcp.Scratch", "CoreTcp.Scratch\CoreTcp.Scratch.csproj", "{F54922C5-A193-43FB-BF01-872DAC40522F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTcp.Scratch", "CoreTcp\CoreTcp.Scratch\CoreTcp.Scratch.csproj", "{A6341392-D4C5-434E-8F7E-5A462876523F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{45860CB4-5BD1-4287-91DF-87EDDE9194F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45860CB4-5BD1-4287-91DF-87EDDE9194F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45860CB4-5BD1-4287-91DF-87EDDE9194F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F54922C5-A193-43FB-BF01-872DAC40522F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F54922C5-A193-43FB-BF01-872DAC40522F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F54922C5-A193-43FB-BF01-872DAC40522F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F54922C5-A193-43FB-BF01-872DAC40522F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6341392-D4C5-434E-8F7E-5A462876523F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6341392-D4C5-434E-8F7E-5A462876523F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6341392-D4C5-434E-8F7E-5A462876523F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6341392-D4C5-434E-8F7E-5A462876523F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
