@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Photon
+namespace PhotonTcp.Servers
 {    
     public class Server
     {

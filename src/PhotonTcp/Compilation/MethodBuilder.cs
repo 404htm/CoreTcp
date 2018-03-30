@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace CoreTcp.Compilation
+namespace PhotonTcp.Compilation
 {
     internal class MethodBuilder : IMethodBuilder
     {

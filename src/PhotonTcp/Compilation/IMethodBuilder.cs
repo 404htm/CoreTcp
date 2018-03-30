@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace CoreTcp.Compilation
+namespace PhotonTcp.Compilation
 {
     internal interface IMethodBuilder
     {
