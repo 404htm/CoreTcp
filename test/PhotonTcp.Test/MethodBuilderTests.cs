@@ -80,7 +80,7 @@ namespace PhotonTcp.Test
         
         internal class TestClass : ITestInterface
         {
-            int _counter = 0;
+            private int _counter = 0;
 
             public int Value
             {

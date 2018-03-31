@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using PhotonTcp.Compilation;
 
 namespace PhotonTcp
@@ -10,7 +11,7 @@ namespace PhotonTcp
         
     }
 
-    public class Service<T> : Service
+    public abstract class Service<T> : Service
     {
         private readonly IMethodBuilder _methodBuilder;
         private readonly Func<T> _impl;
@@ -23,6 +24,7 @@ namespace PhotonTcp
         
         public Service(T implementation)
         {
+            if (!typeof(T).IsInterface) throw new InvalidOperationException("<T> must be an interface");
             _impl = () => implementation;
         }
 
@@ -37,8 +39,16 @@ namespace PhotonTcp
                 .Select(m => _methodBuilder.Build(m))
                 .ToList();
         }
+        
+        public void Start()
+        {
+            //if (Running) throw new InvalidOperationException("Server is already running");
+           // Running = true;
 
-        
-        
+            ThreadPool.QueueUserWorkItem((a) => Listen());
+        }
+
+        protected abstract void Listen();
+
     }
 }

@@ -6,7 +6,7 @@ namespace PhotonTcp.Servers
 {    
     public class Server
     {
-        protected List<Service> _services = new List<Service>();
+        protected readonly List<Service> _services = new List<Service>();
         
         public Server Register<T>(T implementation)
         {
