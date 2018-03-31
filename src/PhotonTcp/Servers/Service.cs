@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Threading;
 using PhotonTcp.Compilation;
 
@@ -8,14 +9,19 @@ namespace PhotonTcp
 {
     public abstract class Service
     {
+        protected List<Method> _Methods;
+        
+        protected abstract object GetImpl();
+        public object[] Call(int method, object[] args) => _Methods[method].Run(GetImpl(), args);
         
     }
 
-    public abstract class Service<T> : Service
+    public class Service<T> : Service
     {
         private readonly IMethodBuilder _methodBuilder;
+        
         private readonly Func<T> _impl;
-        private List<Method> _methods;
+        protected override object GetImpl() => _impl();
 
         internal Service(T implementation, IMethodBuilder methodBuilder) : this(implementation)
         {
@@ -28,27 +34,16 @@ namespace PhotonTcp
             _impl = () => implementation;
         }
 
-        private T GetImpl() => _impl();
-        
-        public object[] Call(int method, object[] args) => _methods[method].Run(GetImpl(), args);
 
         public void Compile()
         {
             var type = typeof(T);
-            _methods = type.GetMethods()
+            _Methods = type.GetMethods()
                 .Select(m => _methodBuilder.Build(m))
                 .ToList();
         }
-        
-        public void Start()
-        {
-            //if (Running) throw new InvalidOperationException("Server is already running");
-           // Running = true;
 
-            ThreadPool.QueueUserWorkItem((a) => Listen());
-        }
 
-        protected abstract void Listen();
 
     }
 }

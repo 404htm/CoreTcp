@@ -76,9 +76,6 @@ namespace CoreTcp
             }
         }
         
-        
-
-
         public void Dispose()
         {
             Console.WriteLine("Server - Shutting Down.");

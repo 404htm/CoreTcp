@@ -16,10 +16,13 @@ namespace PhotonTcp.Servers
             while (true)
             {
                 var socket = await listener.AcceptSocketAsync();
-                HandleRequest(socket);
+                EnqueueRequest(socket);
             }
-            
-            
         }
-    }
+        
+        public void Dispose()
+        {
+            Console.WriteLine("Server - Shutting Down.");
+            _Listener?.Stop();
+        }
 }
