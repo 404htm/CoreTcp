@@ -17,12 +17,9 @@ namespace PhotonTcp.Servers
         public Server Register<T>(T implementation)
         {
             var svc = new Service<T>(implementation);
-            
-            
             _Services.Add(svc);
             return this;
         }
-
         
 
         public void Start()
@@ -32,6 +29,12 @@ namespace PhotonTcp.Servers
 
             ThreadPool.QueueUserWorkItem((a) => Listen());
         }
+        
+        public void Stop()
+        {
+            _Running = false;
+        }
+
 
         protected void DelegateToService(Socket socket)
         {
