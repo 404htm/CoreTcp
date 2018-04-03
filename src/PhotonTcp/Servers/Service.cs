@@ -9,7 +9,7 @@ namespace PhotonTcp
 {
     public abstract class Service
     {
-        protected List<Method> _Methods;
+        internal List<Method> _Methods;
         
         protected abstract object GetImpl();
         public object[] Call(int method, object[] args) => _Methods[method].Run(GetImpl(), args);

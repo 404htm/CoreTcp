@@ -4,8 +4,9 @@ namespace PhotonTcp
 {
     public interface ISerializer<T>
     {
-        T Read(Stream stream);
-        void Write(T obj, Stream stream);
-        byte[] GetBytes(T data);
+        T ReadFromStream(Stream stream);
+        void WriteToStream(T obj, Stream stream);
+        T FromByteArray(byte[] data);
+        byte[] ToByteArray(T obj);
     }
 }

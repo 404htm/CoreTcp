@@ -12,18 +12,22 @@ namespace PhotonTcp.Serializers
             _serializer = new DataContractJsonSerializer(typeof(T));
         }
 
-        public T Read(Stream stream) => (T)_serializer.ReadObject(stream);
+        public T ReadFromStream(Stream stream) => (T)_serializer.ReadObject(stream);
 
-        public void Write(T obj, Stream stream) => _serializer.WriteObject(stream, obj);
+        public void WriteToStream(T obj, Stream stream) => _serializer.WriteObject(stream, obj);
 
+        public T FromByteArray(byte[] data) => (T)_serializer.ReadObject(new MemoryStream(data));
         
-        public byte[] GetBytes(T data)
+        public byte[] ToByteArray(T obj)
         {
             using (var ms = new MemoryStream())
             {
-                _serializer.WriteObject(ms, data);
+                _serializer.WriteObject(ms, obj);
                 return ms.ToArray();
             }
         }
+        
+        
+
     }
 }

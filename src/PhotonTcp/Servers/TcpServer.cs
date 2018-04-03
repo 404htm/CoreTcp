@@ -7,17 +7,17 @@ namespace PhotonTcp.Servers
     {
         private IPAddress _ip;
         private int _port;
-        
+
         public TcpServer(IPAddress ip, int port)
         {
             _ip = ip;
             _port = port;
         }
 
-        private override async void Listen()
+        protected override async void Listen()
         {
             var listener = new TcpListener(_ip, _port);
-            while (_Running)
+            while (_running)
             {
                 var socket = await listener.AcceptSocketAsync();
                 EnqueueRequest(socket);
@@ -34,4 +34,5 @@ namespace PhotonTcp.Servers
             //Console.WriteLine("Server - Shutting Down.");
             //_Listener?.Stop();
         }
+    }
 }

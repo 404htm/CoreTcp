@@ -5,57 +5,61 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Threading;
 using CoreTcp.Utility;
+using PhotonTcp.Serializers;
 
 namespace PhotonTcp.Servers
 {    
     public abstract class Server : IDisposable
     {
-        protected bool _Running;
-        protected readonly List<Service> _Services = new List<Service>();
+        protected bool _running;
+        protected readonly List<Service> _services = new List<Service>();
         private readonly Encoder _encoder = new Encoder();
+        private readonly ISerializer<object[]> _serializer = new JsonSerializer<object[]>();
         
         public Server Register<T>(T implementation)
         {
             var svc = new Service<T>(implementation);
-            _Services.Add(svc);
+            _services.Add(svc);
             return this;
         }
         
 
         public void Start()
         {
-            if (_Running) throw new InvalidOperationException("Server is already running");
-            _Running = true;
+            if (_running) throw new InvalidOperationException("Server is already running");
+            _running = true;
 
             ThreadPool.QueueUserWorkItem((a) => Listen());
         }
         
         public void Stop()
         {
-            _Running = false;
+            _running = false;
         }
 
 
-        protected void DelegateToService(Socket socket)
+        protected void InvokeService(Socket socket)
         {
-            byte[] bytes = _encoder.Read(socket);
-            var items = _serializer.Read(bytes);
+            byte[] bytes = _encoder.ReadData(socket);
+            var items = _serializer.FromByteArray(bytes);
             var svcId = (int)items[0];
             var svc = GetImplementation(svcId);
-            var result = svc.Call(items.Skip(1).ToArray());
-            
+            var result = svc.Call((int)items[1], items.Skip(2).ToArray());
+            Reply(socket, result);
         }
 
-        protected void EncodeAndReply(Socket socket)
+        protected void Reply(Socket socket, object[] response)
         {
+            var bytes = _serializer.ToByteArray(response);
+            socket.Send(bytes);
         }
 
         protected void EnqueueRequest(Socket socket)
         {
-            ThreadPool.QueueUserWorkItem(a => DelegateToService(socket));
+            ThreadPool.QueueUserWorkItem(a => InvokeService(socket));
         }
         
-        protected Service GetImplementation(int id) => _Services.ElementAt(id);
+        protected Service GetImplementation(int id) => _services.ElementAt(id);
 
         protected abstract void Listen();
 
