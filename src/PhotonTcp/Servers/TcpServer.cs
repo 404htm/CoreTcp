@@ -5,8 +5,9 @@ namespace PhotonTcp.Servers
 {
     public class TcpServer : Server
     {
-        private IPAddress _ip;
-        private int _port;
+        private readonly IPAddress _ip;
+        private readonly int _port;
+        private TcpListener _listener;
 
         public TcpServer(IPAddress ip, int port)
         {
@@ -16,23 +17,18 @@ namespace PhotonTcp.Servers
 
         protected override async void Listen()
         {
-            var listener = new TcpListener(_ip, _port);
+            _listener = new TcpListener(_ip, _port);
             while (_running)
             {
-                var socket = await listener.AcceptSocketAsync();
+                var socket = await _listener.AcceptSocketAsync();
                 EnqueueRequest(socket);
             }
-        }
-
-        protected override void Reply(object[] result)
-        {
-            throw new System.NotImplementedException();
         }
 
         public override void Dispose()
         {
             //Console.WriteLine("Server - Shutting Down.");
-            //_Listener?.Stop();
+            _listener?.Stop();
         }
     }
 }

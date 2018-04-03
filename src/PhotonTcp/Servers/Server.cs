@@ -34,6 +34,7 @@ namespace PhotonTcp.Servers
         
         public void Stop()
         {
+            //TODO: Stuff
             _running = false;
         }
 
@@ -52,6 +53,7 @@ namespace PhotonTcp.Servers
         {
             var bytes = _serializer.ToByteArray(response);
             socket.Send(bytes);
+            socket.Close();
         }
 
         protected void EnqueueRequest(Socket socket)
@@ -61,10 +63,8 @@ namespace PhotonTcp.Servers
         
         protected Service GetImplementation(int id) => _services.ElementAt(id);
 
+        
         protected abstract void Listen();
-
-        protected abstract void Reply(object[] result);
-
         public abstract void Dispose();
     }
 }
